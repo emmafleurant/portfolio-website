@@ -1,0 +1,332 @@
+/*Emmanuela's Handwritting*/
+@font-face {
+  font-family: "Fleurant"; 
+  src: url("/fonts/Myfont-Regular.otf") format("opentype"),
+       url("/fonts/Myfont-Regular.ttf") format("truetype"); 
+  font-weight: 500; /* medium */
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: "Jet Brains";
+  src: url("fonts/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jet Brains";
+  src: url("fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    
+}
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+section {
+    padding: 4rem 2rem;
+    min-height: 100vh;       
+
+}
+
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* space between journey and projects */
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+h2.section-title {
+  font-family: "Fleurant", cursive;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+h2.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: orange;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+
+/*NAVIGATION*/
+.nav-class {
+    margin: 0 auto;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-logo {
+    font-family: 'Fleurant', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: lightpink;
+}
+
+
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons img {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    transform: transform 0.2s;
+}
+
+.social-icons img:hover {
+   transform: scale(1.1); 
+}
+
+/*HOME*/
+/*HOME*/
+.p-section {
+    font-family: "Jet Brains";
+    font-size: bold;
+}
+
+.container{
+    display: inline-block;
+    margin: 0 auto;
+    font-family: 'Jet Brains';
+    font-weight: normal;
+}
+
+.typed-out{
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: 
+      typing 4s steps(20, end) forwards;
+      font-size: 1.6rem;
+      width: 0;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+.about-section {
+    min-height: 50vh;
+}
+.about-section p {
+  max-width: 700px;  /* keep text readable */
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.list-container { 
+    list-style: square;
+    padding:10;
+    margin: 0;
+
+}
+
+.list-items {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.button-container {
+    justify-content: center;
+    gap: 1rem;
+    display: flex;
+    margin-bottom: 2rem;
+
+}
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 2rem;    
+}
+
+
+
+
+
+
+
+
+/*vertical tab*/
+#journey {
+    min-height: 50vh;
+
+}
+.timeline-tabs-container {
+    display: flex;
+    
+}
+
+.timeline-buttons {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #ccc;
+    padding-right: 20px;
+}
+
+.tab-button {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px 15px;
+    text-align: left; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #ccc;
+}
+
+.timeline-panels {
+    padding-left: 20px;
+}
+
+.tab-panel {
+    display: none;
+    float: left;
+    padding: 0px 12px;
+    padding: 1px solid #ccc;
+    width: 70%; 
+    border-left: none;
+    height: 300px;
+    line-height: 1.6;
+
+
+}
+
+.tab-panel.active {
+    display: block;
+}
+.tab-panel h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tab-panel p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+
+
+/*Project cards*/
+#project-section{ 
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    text-align:center;
+    gap: 2rem;
+
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    flex: 0 0 auto;
+   
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.container{
+    padding: 1rem;
+}
+
+.container h3, p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+
+/*SKILLS*/
+.skills-section {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    min-height: 50vh;
+}
+.skills-section img {
+    height: 45px;
+    width: 45px;
+    margin-right: 25px;
+    padding: 5px;
+
+}
+
+/*FOOTER*/
+footer {
+    text-align: center;
+}
