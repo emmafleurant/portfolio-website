@@ -1,8 +1,8 @@
 /*Emmanuela's Handwritting*/
 @font-face {
   font-family: "Fleurant"; 
-  src: url("/fonts/Myfont-Regular.otf") format("opentype"),
-       url("/fonts/Myfont-Regular.ttf") format("truetype"); 
+  src: url("/fonts/Myfont-Regular.otf") format("otf"),
+       url("/fonts/Myfont-Regular.ttf") format("ttf"); 
   font-weight: 500; /* medium */
   font-style: normal;  
 }
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "Jet Brains";
   src: url("/fonts/JetBrainsMono-Bold.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 700; /*Bold*/
   font-style: normal;
 }
 
@@ -123,7 +123,6 @@ h2.section-title::after {
 }
 
 /*HOME*/
-/*HOME*/
 .p-section {
     font-family: "Jet Brains";
     font-size: bold;
@@ -154,7 +153,7 @@ h2.section-title::after {
     min-height: 50vh;
 }
 .about-section p {
-  max-width: 700px;  /* keep text readable */
+  max-width: 700px;  
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -187,13 +186,6 @@ h2.section-title::after {
     background-color: white;
     border-radius: 2rem;    
 }
-
-
-
-
-
-
-
 
 /*vertical tab*/
 #journey {
