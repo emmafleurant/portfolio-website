@@ -9,14 +9,14 @@
 
 @font-face {
   font-family: "Jet Brains";
-  src: url("/portfolio-website/fonts/JetBrainsMono-Bold.woff2") format("woff2");
+  src: url("/fonts/JetBrainsMono-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Jet Brains";
-  src: url("/portfolio-website/fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
+  src: url("/fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
