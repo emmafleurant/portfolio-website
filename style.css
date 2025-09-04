@@ -1,8 +1,8 @@
 /*Emmanuela's Handwritting*/
 @font-face {
   font-family: "Fleurant"; 
-  src: url("/fonts/Myfont-Regular.otf") format("opentype"),
-       url("/fonts/Myfont-Regular.ttf") format("truetype"); 
+  src: url("fonts/Myfont-Regular.otf") format("opentype"),
+       url("fonts/Myfont-Regular.ttf") format("truetype"); 
   font-weight: 500; /* medium */
   font-style: normal;  
 }
