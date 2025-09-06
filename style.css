@@ -1,23 +1,23 @@
-/*Emmanuela's Handwritting*/
+/* Emmanuela's Handwriting */
 @font-face {
   font-family: "Fleurant"; 
-  src: url("/fonts/Myfont-Regular.otf") format("otf"),
-       url("/fonts/Myfont-Regular.ttf") format("ttf"); 
-  font-weight: 500; /* medium */
+  src: url("/fonts/Myfont-Regular.otf") format("opentype"),
+       url("/fonts/Myfont-Regular.ttf") format("truetype"); 
+  font-weight: 500; /* Medium */
   font-style: normal;  
 }
 
 @font-face {
-  font-family: "Jet Brains";
+  font-family: "JetBrains Mono";
   src: url("/fonts/JetBrainsMono-Bold.woff2") format("woff2");
-  font-weight: 700; /*Bold*/
+  font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Jet Brains";
+  font-family: "JetBrains Mono";
   src: url("/fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
+  font-weight: 800; /* Extra Bold */
   font-style: normal;
 }
 
