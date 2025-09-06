@@ -20,7 +20,7 @@
   font-weight: 800; /* Extra Bold */
   font-style: normal;
 }
-
+/*GENERAL*/
 html {
     scroll-behavior: smooth;
 }
@@ -28,15 +28,8 @@ html {
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
-    
 }
-@media (min-width: 768px) {
-    body {
-        font-size: 16px;
-        margin: 0;
-        padding: 0;
-    }
-}
+
 
 section {
     padding: 4rem 2rem;
@@ -45,7 +38,194 @@ section {
 }
 
 
+/*NAVIGATION*/
+.nav-class {
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+    background: white;
+    z-index: 1000;
+}
 
+.nav-left {
+    display: flex;
+    align-items: center;
+   
+}
+.nav-logo {
+    font-family: 'Fleurant', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    margin-left: 30px;
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: lightpink;
+}
+
+/* Social icons */
+.social-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    height: 40px;
+    width: 40px;
+    transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+   transform: scale(1.1); 
+}
+
+
+/*HAMBURGER STYLE & SCREEN RESPONSIVE*/
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*TABLET STYLES */
+@media (max-width: 900px) and (min-width: 601px) {
+    .nav-class {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .timeline-tabs-container {
+        flex-direction: column;
+    }
+
+    .timeline-buttons {
+        flex-direction: row;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+        padding: 0.5rem 0;
+    }
+
+    .timeline-panels {
+        padding-left: 0;
+    }
+
+    #project-section {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 45%; /* 2 cards per row */
+    }
+
+    .skills-section img {
+        height: 40px;
+        width: 40px;
+        margin-right: 20px;
+    }
+}
+
+/*MOBILE STYLES*/ 
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+        margin-left:auto ;
+        
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 0;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-class {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    h2.section-title {
+        font-size: 1.8rem;
+    }
+
+
+    body {
+        font-size: 14px;
+    }
+
+    #project-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; 
+    }
+
+    .about-section p, .list-items,
+    .tab-panel p {
+        font-size: 1rem;
+    }
+
+    .skills-section img {
+        height: 35px;
+        width: 35px;
+        margin-right: 15px;
+    }
+}
+
+
+/*MAIN PAGE*/
 .main-content {
     display: flex;
     flex-direction: column;
@@ -74,60 +254,8 @@ h2.section-title::after {
 }
 
 
-/*NAVIGATION*/
-.nav-class {
-    margin: 0 auto;
-    display: flex;
-    position: sticky;
-    top: 0;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.nav-logo {
-    font-family: 'Fleurant', Arial, sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    margin-left: 20px;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: lightpink;
-}
-
-
-
-.social-icons {
-    text-align: center;
-}
-
-.social-icons img {
-    height: 40px;
-    width: 40px;
-    margin-left: 10px;
-    transform: transform 0.2s;
-}
-
-.social-icons img:hover {
-   transform: scale(1.1); 
-}
 
 /*HOME*/
-.p-section {
-    font-family: "Jet Brains";
-    font-size: bold;
-}
-
 .container{
     display: inline-block;
     margin: 0 auto;
@@ -256,8 +384,6 @@ h2.section-title::after {
   font-size: 1.2rem;
 }
 
-
-
 /*Project cards*/
 #project-section{ 
     display: flex;
@@ -310,6 +436,7 @@ h2.section-title::after {
     margin-bottom: 20px;
     min-height: 50vh;
 }
+
 .skills-section img {
     height: 45px;
     width: 45px;
@@ -322,3 +449,5 @@ h2.section-title::after {
 footer {
     text-align: center;
 }
+
+
